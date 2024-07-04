@@ -1,13 +1,30 @@
-namespace SistemaClientes.Models;
+using System.ComponentModel.DataAnnotations;
 
-public class Cliente
+namespace SistemaClientes.Models
 {
-     public int ID_Cliente { get; set; }
-     public string Nome { get; set; }
-     public string Endereco { get; set; }
-     public string Telefone { get; set; }
-     public string RG { get; set; }
-     public string CPF { get; set; }
-     public string Email { get; set; }
+    public class Cliente
+    {
+        [Key]
+        public int ID_Cliente { get; set; }
 
+        [Required]
+        [StringLength(100)]
+        public string Nome { get; set; }
+
+        [StringLength(200)]
+        public string Endereco { get; set; }
+
+        [StringLength(20)]
+        public string Telefone { get; set; }
+
+        [StringLength(20)]
+        public string RG { get; set; }
+
+        [StringLength(14)]
+        public string CPF { get; set; }
+
+        [StringLength(100)]
+        [EmailAddress]
+        public string Email { get; set; }
+    }
 }

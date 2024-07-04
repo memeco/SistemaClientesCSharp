@@ -14,8 +14,7 @@ namespace SistemaClientes.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Cliente>()
-                .HasKey(c => c.ID_Cliente);
+            modelBuilder.Entity<Cliente>().HasKey(c => c.ID_Cliente);
         }
     }
 }

@@ -66,3 +66,27 @@ Views/Home/Create.cshtml
 Views/Home/Details.cshtml
 Views/Home/Edit.cshtml
 Views/Home/Delete.cshtml
+
+
+
+# MVC
+
+O ASP.NET Core MVC usa convenções de nomeação para determinar qual view renderizar para um método de ação em um controlador. Quando você chama return View(); em um método de ação, o framework por padrão procura uma view cujo nome corresponda ao nome do método de ação, dentro de uma pasta que corresponde ao nome do controlador.
+
+## Estrutura do projeto
+
+SistemaClientes/
+├── Controllers/
+│   └── ClienteController.cs
+├── Data/
+│   └── ApplicationDbContext.cs
+├── Models/
+│   └── Cliente.cs
+├── Views/
+│   └── Cliente/
+│       ├── Index.cshtml
+│       ├── Details.cshtml
+│       ├── Create.cshtml
+│       ├── Edit.cshtml
+│       └── Delete.cshtml
+└── Program.cs
